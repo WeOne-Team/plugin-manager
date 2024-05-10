@@ -46,11 +46,9 @@ class PluginManagerController extends Controller
                         'image' => null,
                     ];
 
-                    $screenshot = "vendor/core/plugins/$path/screenshot.png";
-
-                    if (File::exists(public_path($screenshot))) {
-                        $manifest['image'] = asset($screenshot);
-                    } elseif (File::exists($pluginPath . '/screenshot.png')) {
+                    $screenshot = "https://opengraph.githubassets.com/3e5790fa72ce7003d834c2ae6eb870977ec613b95992436f074ea75ace8f1837/".$manifest['id'];
+                    $manifest['image'] = $screenshot;
+                    if (File::exists($pluginPath . '/screenshot.png')) {
                         $manifest['image'] = 'data:image/png;base64,' . base64_encode(File::get($pluginPath . '/screenshot.png'));
                     }
 
