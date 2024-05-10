@@ -11,6 +11,8 @@ class PluginManagerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        require_once __DIR__.'/../helpers/common.php';
         /*
          * Optional methods to load your package assets
          */
@@ -52,7 +54,6 @@ class PluginManagerServiceProvider extends ServiceProvider
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'plugin-manager');
 
-        // include __DIR__ . '/routes.php';
         // Register the main class to use with the facade
         $this->app->singleton('plugin-manager', function () {
             return new PluginManager;

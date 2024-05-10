@@ -10,13 +10,28 @@
     "type": "library",
     "authors": [
         {
-            "name": "WeOne",
+            "name": "Sang Thai Dinh",
             "email": "thai.sang@rivercrane.one",
+            "role": "Team Leader"
+        },
+        {
+            "name": "Dang Dao Duc",
+            "email": "dang.duc@rivercrane.one",
+            "role": "Business Analytics Specialists"
+        },
+        {
+            "name": "Van Quang Qui",
+            "email": "van.qui@rivercrane.one",
+            "role": "Team Leader"
+        },
+        {
+            "name": "Pham Van Phong",
+            "email": "pham.phong@rivercrane.one",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^8.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -32,6 +47,9 @@
             "Weoneteam\\PluginManager\\Tests\\": "tests"
         }
     },
+    "files": [
+        "helpers/common.php"
+    ],
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
