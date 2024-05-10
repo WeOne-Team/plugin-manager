@@ -16,7 +16,7 @@ class PluginManagerServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'plugin-manager');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'plugin-manager');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'plugin-manager');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
@@ -32,14 +32,14 @@ class PluginManagerServiceProvider extends ServiceProvider
             ], 'views');
 
             // Publishing assets.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/plugin-manager'),
-            ], 'assets');*/
+            ], 'assets');
 
             // Publishing the translation files.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/plugin-manager'),
-            ], 'lang');*/
+            ], 'lang');
 
             // Registering package commands.
             // $this->commands([]);
