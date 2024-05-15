@@ -6,7 +6,7 @@ use Weoneteam\PluginManager\Supports\BaseHelper;
 if (! function_exists('plugin_path')) {
     function plugin_path(?string $path = null): string
     {
-        return platform_path('plugins' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
+        return platform_path('modules' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
     }
 }
 
