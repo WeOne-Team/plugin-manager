@@ -30,7 +30,6 @@ class PluginManagerController extends AccountBaseController
     }
     public function index(Request $request)
     {
-        Module::enable('GoogleDriveIntegration');
         $moduleList = Module::allEnabled();
         $activatedModule = [];
         foreach ($moduleList as $module)
